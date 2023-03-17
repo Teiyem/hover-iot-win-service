@@ -13,13 +13,15 @@ Hover Windows Service is a C# web API application that interfaces with a Spring 
 * .NET 6.
 * MSSQL.
 * Chroma REST SDK API.
-* Hover Spring Boot hub.
+* Hover Spring Boot central hub.
 
 ## Installation
-* Clone the repository or download the source code.
-* Open the solution file in Visual Studio.
-* Build the solution.
-* Run the Hover Windows Service application.
+* Clone the repository.
+* Open Command Prompt as an Administrator.
+* Navigate to the hover-iot-win-service\scripts.
+* Modify the install.conf file with the appropriate values based on your preference.
+* Run the install.bat file to create the necessary directories, publish the application, set permissions, register the service, and start the service. 
+* If the service already exists, the batch file will stop and prompt you to delete or update the existing service. Choose the appropriate action based on your needs.
 * Ensure that the Hover backend is running and accessible.
 
 ## Usage
