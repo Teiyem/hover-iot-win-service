@@ -15,8 +15,10 @@ namespace Hover
             var builder = WebApplication.CreateBuilder(args);
 
             RegisterServices(builder.Services);
-
+            
             builder.Services.AddControllers();
+
+            builder.Services.AddWindowsService();
 
             var app = builder.Build();
 
@@ -33,7 +35,6 @@ namespace Hover
         /// <param name="collection">Collection of services to add the services to.</param>
         private static void RegisterServices(IServiceCollection collection)
         {
-
         }
     }
 }
