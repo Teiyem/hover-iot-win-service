@@ -13,7 +13,6 @@ Hover Windows Service is a C# ASP.NET Web API application which is hosted as a W
 * .NET 6.
 * MSSQL.
 * Chroma REST SDK API.
-* Hover Spring Boot central hub.
 
 ## Installation
 * Clone the repository.
