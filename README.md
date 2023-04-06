@@ -22,7 +22,7 @@ Hover Windows Service is a C# ASP.NET Web API application which is hosted as a W
 * Modify the install.conf file with the appropriate values based on your preference.
 * Run the install.bat file to create the necessary directories, publish the application, set permissions, register the service, and start the service. 
 * If the service already exists, the batch file will stop and prompt you to delete or update the existing service. Choose the appropriate action based on your needs.
-* Ensure that the Hover backend is running and accessible.
+* Ensure that the Hover is running and accessible.
 
 ## Usage
 * Use the Hover Windows Service to manage and monitor smart home devices.
