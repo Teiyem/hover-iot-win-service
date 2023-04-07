@@ -1,7 +1,7 @@
 # Hover Windows Service
 Hover Windows Service is a C# ASP.NET Web API application which is hosted as a Windows Service that interfaces with Hover, which is the central hub for managing and monitoring smart home devices. Hover Windows Service also serves as a smart home device to Hover as a computer, with peripherals from Razer, and provides an interface to the Chroma REST SDK API.
 
-## Features (In Progress)
+## Features
 * Interfaces with Hover backend to manage and monitor smart home devices. ⚠
 * Serves as a smart home device to Hover as a computer. ⚠
 * Provides an interface to the Chroma REST SDK API. ⚠
