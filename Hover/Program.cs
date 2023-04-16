@@ -1,5 +1,4 @@
 using Hover.Data;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hover
@@ -23,7 +22,7 @@ namespace Hover
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddDbContext<ApplicationDbContext>(opts =>
-                opts.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings")));
+                opts.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnectionString")));
 
             builder.Services.AddWindowsService();
 
