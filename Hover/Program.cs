@@ -1,3 +1,7 @@
+using Hover.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace Hover
 {
     /// <summary>
@@ -14,27 +18,29 @@ namespace Hover
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            RegisterServices(builder.Services);
-            
             builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(opts =>
+                opts.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings")));
 
             builder.Services.AddWindowsService();
 
             var app = builder.Build();
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
 
             app.UseAuthorization();
 
             app.MapControllers();
 
             app.Run();
-        }
-
-        /// <summary>
-        /// Registers all the services that are used by the application.
-        /// </summary>
-        /// <param name="collection">Collection of services to add the services to.</param>
-        private static void RegisterServices(IServiceCollection collection)
-        {
         }
     }
 }
