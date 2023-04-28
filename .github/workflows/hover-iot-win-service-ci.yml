@@ -1,0 +1,22 @@
+name: CI Build Hover Win Service
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore NuGet packages
+      run: dotnet restore
+    - name: Build with dotnet
+      run: dotnet build --no-restore
